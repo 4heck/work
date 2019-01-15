@@ -3,21 +3,21 @@ import re
 
 class Ad(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    customer = db.Column(db.Integer)
-    phone = db.Column(db.Integer)
-    price = db.Column(db.Integer)
+    employee = db.Column(db.Integer)
+    company = db.Column(db.Integer)
+    salary = db.Column(db.Integer)
     locality = db.Column(db.Integer)
 
     def to_dict(self):
         dict = {
-        'customer': self.customer,
-        'phone': self.phone,
-        'price': self.price,
+        'employee': self.employee,
+        'company': self.company,
+        'salary': self.salary,
         'locality': self.locality
         }
         return dict
 
-class Customer(db.Model):
+class Employee(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(300))
 
@@ -41,7 +41,7 @@ class Town(db.Model):
         }
         return dict
 
-class Phone(db.Model):
+class Company(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(300))
 
