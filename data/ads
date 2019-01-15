@@ -1,0 +1,2 @@
+INSERT INTO public.ad(customer, phone, price, locality)
+	VALUES (random()*11117, random()*10336, random()*40000+10000, random()*106908);
